@@ -13,7 +13,7 @@ function isInt(value){
 }
 
 chrome.contextMenus.onClicked.addListener(function(clickData){
-	if(clikData.menuItemId == "spendMoney" && clickData.delectionText){
+	if(clikData.menuItemId == "spendMoney" && clickData.selectionText){
 		if(isInt(clickData.selectionText)){
 			chrome.storage.sync.get(["total", "limit"], function(budget){
 				var newTotal = 0;
